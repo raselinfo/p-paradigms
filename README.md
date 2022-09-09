@@ -30,3 +30,10 @@ it takes the concept of functions a little bit further.
 
 ## Object-oriented programming (অবজেক্ট ভিত্তিক)
 1. OOP is a programming paradigm based on the concept of "objects"
+
+
+## EVENT DRIVEN PROGRAMMING 
+In computer programming, event-driven programming is a programming paradigm 
+in which the flow of the program is determined by events such as user actions 
+(mouse clicks, key presses), sensor outputs, or message passing from other 
+programs or threads
