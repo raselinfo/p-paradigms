@@ -25,10 +25,12 @@ it takes the concept of functions a little bit further.
 6. An important thing to notice about declarative programming is that under the hood, the computer processes this information as imperative code anyway.
 
 ## Object-oriented programming (অবজেক্ট ভিত্তিক)
-### What is OOP-----
-An object is a 
-component of a program that knows how to perform certain actions and how 
-to interact with other elements of the program. Objects are the basic units 
+
+### What is OOP
+
+An object is a
+component of a program that knows how to perform certain actions and how
+to interact with other elements of the program. Objects are the basic units
 of object-oriented programming.
 
 The object-oriented programming is basically a computer programming design philosophy or methodology that organizes/ models software design around data, or objects rather than functions and logic.
@@ -36,12 +38,14 @@ The object-oriented programming is basically a computer programming design philo
 It simplifies <b>software development and maintenance</b> by providing major concepts such as **abstraction, inheritance, polymorphism, and encapsulation**. These core concepts support OOP.
 
 ### Points to Remember
+
 - Everything is an object
 - Developer manipulates objects that uses message passing.
 - Every object is an instance of a class.
 - The class contains the attribute and behavior associated with an object.
 
 ### Pillars of OOPs
+
 The major concepts that we have discussed above are known as pillars of OOPs. There are four pillars on which OOP rests.
 
 1. Abstraction
@@ -50,21 +54,47 @@ The major concepts that we have discussed above are known as pillars of OOPs. Th
 4. Polymorphism
 
 #### Abstraction (অপসারণ,প্রত্যাহরণ)
+
 Abstraction allows us to hide the implementation from the user but shows only essential information to the user. Using the concept developer can easily make changes and added over time.
 <img src="./images/abstraction.png"/>
 
 **There are the following advantages of abstraction:**
+
 - It reduces complexity.
 - It avoids delicacy.
 - Eases the burden of maintenance
 - Increase security and confidentially.
 
+## OOP In Javascript
 
+### Factory Function
 
+```js
+const circle = {
+  radius: 4,
+  draw() {
+    console.log("Draw");
+  },
+};
 
+const circle2 = {
+  radius: 4,
+  draw() {
+    console.log("Draw");
+  },
+};
+// if the object has one or more object , it's call "Behavior"
+// Factory Function : The Factory Function is similar to constructor functions/class functions, but instead of using new to create an object, factory functions simply creates an object and returns it. Factory Functions are a very useful tool in JavaScript
 
-
-
+function createCircle(radius) {
+  return {
+    radius,
+    draw() {
+      console.log("Draw");
+    },
+  };
+}
+```
 
 ## EVENT DRIVEN PROGRAMMING
 
