@@ -35,20 +35,29 @@ The object-oriented programming is basically a computer programming design philo
 
 It simplifies <b>software development and maintenance</b> by providing major concepts such as **abstraction, inheritance, polymorphism, and encapsulation**. These core concepts support OOP.
 
-
 ### Points to Remember
 - Everything is an object
 - Developer manipulates objects that uses message passing.
 - Every object is an instance of a class.
 - The class contains the attribute and behavior associated with an object.
 
+### Pillars of OOPs
+The major concepts that we have discussed above are known as pillars of OOPs. There are four pillars on which OOP rests.
 
+1. Abstraction
+2. Encapsulation
+3. Inheritance
+4. Polymorphism
 
+#### Abstraction (অপসারণ,প্রত্যাহরণ)
+Abstraction allows us to hide the implementation from the user but shows only essential information to the user. Using the concept developer can easily make changes and added over time.
+<img src="./images/abstraction.png"/>
 
-
-
-
-
+**There are the following advantages of abstraction:**
+- It reduces complexity.
+- It avoids delicacy.
+- Eases the burden of maintenance
+- Increase security and confidentially.
 
 
 
