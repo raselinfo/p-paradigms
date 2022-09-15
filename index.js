@@ -1,15 +1,30 @@
-// Constructor Function
-function Circle(radius) {
-//   console.log(this);
-  this.radius = radius;
-  this.draw = () => {
-    console.log("Draw");
+function Circle() {
+  let _ratio = { x: 0, y: 0.5 };
+  this.getRatio = () => {
+    return _ratio;
+  };
+  this.setRatio = (value) => {
+    return (_ratio = value);
   };
 }
 
-// Circle.call({}, 5);  it's only return an object if return this from the Constructor function
-// Circle.apply({}, 5); it's only return an object if return this from the Constructor function
-// Circle.bind({}, 5); it's only return an object if return this from the Constructor function
-const circle = new Circle(5);  // new keyword make an empty object {}
-console.log(circle)
+const circle=new Circle()
+console.log(circle.getRatio())
 
+// Abstraction with define property
+function Circle() {
+  let _ratio = { x: 0, y: 0.5 };
+
+  Object.defineProperty(this, "getRatio", {
+    get() {
+      return _ratio;
+    },
+    set(value) {
+      return (_ratio = value);
+    },
+  });
+}
+
+const circle = new Circle();
+console.log(circle.getRatio);
+console.log((circle.getRatio = { x: 10, y: 2 }));
