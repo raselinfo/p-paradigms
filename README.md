@@ -1,5 +1,3 @@
-
-
 ## Imperative Programming (অনুজ্ঞাসূচক, বাধ্যতামূলক)
 
 Imperative programming consists of sets of detailed instructions that are given to the computer to execute in a given order.
@@ -26,14 +24,42 @@ it takes the concept of functions a little bit further.
 5. JSX syntax (what React uses) mixes HTML and JS in the same thing, which makes it easier and faster to write apps. But that's not what browsers read and execute. React code is later on transpiled into regular HTML and JS, and that's what browsers run in reality.
 6. An important thing to notice about declarative programming is that under the hood, the computer processes this information as imperative code anyway.
 
-
-
 ## Object-oriented programming (অবজেক্ট ভিত্তিক)
-1. OOP is a programming paradigm based on the concept of "objects"
+### What is OOP-----
+An object is a 
+component of a program that knows how to perform certain actions and how 
+to interact with other elements of the program. Objects are the basic units 
+of object-oriented programming.
+
+The object-oriented programming is basically a computer programming design philosophy or methodology that organizes/ models software design around data, or objects rather than functions and logic.
+
+It simplifies <b>software development and maintenance</b> by providing major concepts such as **abstraction, inheritance, polymorphism, and encapsulation**. These core concepts support OOP.
 
 
-## EVENT DRIVEN PROGRAMMING 
-In computer programming, event-driven programming is a programming paradigm 
-in which the flow of the program is determined by events such as user actions 
-(mouse clicks, key presses), sensor outputs, or message passing from other 
+### Points to Remember
+- Everything is an object
+- Developer manipulates objects that uses message passing.
+- Every object is an instance of a class.
+- The class contains the attribute and behavior associated with an object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## EVENT DRIVEN PROGRAMMING
+
+In computer programming, event-driven programming is a programming paradigm
+in which the flow of the program is determined by events such as user actions
+(mouse clicks, key presses), sensor outputs, or message passing from other
 programs or threads
