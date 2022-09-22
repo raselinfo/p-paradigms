@@ -150,6 +150,27 @@ console.log(circle.getRatio);
 console.log((circle.getRatio = { x: 10, y: 2 }));
 ```
 
+### Prototypes (Parent)
+
+**Inheritance parent class are called by (Parent Class/Base Class/Supper Class)**
+Every Object in javascript has (parent object / prototype).and every object inherit from its prototype
+We have two types of inheritance
+
+1. Classical Inheritance
+2. Prototypical Inheritance
+
+<img src="/images/Inheritances.png"/>
+
+Every Object are create from the same (object base / prototype)
+
+```js
+const x = {};
+const y = {};
+
+const result = Object.getPrototypeOf(x) === Object.getPrototypeOf(y);
+console.log(result); // true; Because x and y are create from same object base
+```
+
 ## EVENT DRIVEN PROGRAMMING
 
 In computer programming, event-driven programming is a programming paradigm
