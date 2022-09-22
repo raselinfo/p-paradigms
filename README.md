@@ -152,8 +152,11 @@ console.log((circle.getRatio = { x: 10, y: 2 }));
 
 ### Prototypes (Parent)
 
+**What is prototype and prototype inheritance in JavaScript?**
+In JavaScript, an object can inherit properties of another object. The object from where the properties are inherited is called the prototype. In short, objects can inherit properties from other objects — the prototypes
+
 **Inheritance parent class are called by (Parent Class/Base Class/Supper Class)**
-Every Object in javascript has (parent object / prototype).and every object inherit from its prototype
+Every Object in javascript has (parent object / prototype) except the root object.and every object inherit from its prototype
 We have two types of inheritance
 
 1. Classical Inheritance
@@ -169,6 +172,48 @@ const y = {};
 
 const result = Object.getPrototypeOf(x) === Object.getPrototypeOf(y);
 console.log(result); // true; Because x and y are create from same object base
+```
+
+**Property Descriptor : see the state of a property**
+
+```js
+const obj = { name: "Rasel" };
+const objectBase = Object.getPrototypeOf(obj);
+// const propertyDescriptor = Object.getOwnPropertyDescriptor(
+//   obj,
+//   "name"
+// );
+const propertyDescriptor = Object.getOwnPropertyDescriptor(
+  objectBase,
+  "toString"
+);
+console.log(propertyDescriptor);
+// {
+// writable: true, // we can modify
+// enumerable: false, // we can access parent property if true. Object.keys() will be empty if its false
+// configurable: true, // we can delete if true
+// value: ƒ
+// }
+```
+
+**MOdify the state of a object property**
+
+```js
+const obj = { name: "Rasel", age: 30 };
+
+// Object.defineProperty(obj, "name", {
+//   enumerable: false,
+// });
+Object.defineProperties(obj, {
+  name: {
+    enumerable: false,
+    writable: true,
+  },
+  age: {
+    enumerable: false,
+  },
+});
+console.log(Object.keys(obj)); // []
 ```
 
 ## EVENT DRIVEN PROGRAMMING

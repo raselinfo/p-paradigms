@@ -1,5 +1,15 @@
-const x = {};
-const y = {};
+const obj = { name: "Rasel", age: 30 };
 
-const result = Object.getPrototypeOf(x) === Object.getPrototypeOf(y);
-console.log(result) // true; Because x and y are create from same object base
+// Object.defineProperty(obj, "name", {
+//   enumerable: false,
+// });
+Object.defineProperties(obj, {
+  name: {
+    enumerable: false,
+    writable: true,
+  },
+  age: {
+    enumerable: false,
+  },
+});
+console.log(Object.keys(obj)); // []
