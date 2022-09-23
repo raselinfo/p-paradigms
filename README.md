@@ -218,6 +218,11 @@ console.log(Object.keys(obj)); // []
 
 #### Prototype member VS Instance member
 
+You can modify or add new prototype member . but don't do this always. because you might need to use a third party library and they may be used the same property. then it's can be destroy your application
+
+But you can put method as an optimization technique.
+so if you work a large number of object. you don't need to copy same method as instance multiple time. cause it's not good for optimize
+
 ```js
 function Circle(radius) {
   // Instance Member
