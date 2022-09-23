@@ -1,15 +1,16 @@
-const obj = { name: "Rasel", age: 30 };
+function Circle(radius) {
+  // Instance Member
+  this.radius = radius;
+}
 
-// Object.defineProperty(obj, "name", {
-//   enumerable: false,
-// });
-Object.defineProperties(obj, {
-  name: {
-    enumerable: false,
-    writable: true,
-  },
-  age: {
-    enumerable: false,
-  },
-});
-console.log(Object.keys(obj)); // []
+// Prototypical member
+Circle.prototype.draw = () => {
+  console.log("Draw", this.radius);
+};
+
+Circle.prototype.toString = function () {
+  return "Update To String Method";
+};
+
+const c1 = new Circle();
+console.log(c1)

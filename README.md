@@ -216,6 +216,27 @@ Object.defineProperties(obj, {
 console.log(Object.keys(obj)); // []
 ```
 
+### Prototype member VS Instance member
+
+```js
+function Circle(radius) {
+  // Instance Member
+  this.radius = radius;
+}
+
+// Prototypical member
+Circle.prototype.draw = () => {
+  console.log("Draw", this.radius);
+};
+
+Circle.prototype.toString = function () {
+  return "Update To String Method";
+};
+
+const c1 = new Circle();
+console.log(c1);
+```
+
 ## EVENT DRIVEN PROGRAMMING
 
 In computer programming, event-driven programming is a programming paradigm
