@@ -13,4 +13,12 @@ Circle.prototype.toString = function () {
 };
 
 const c1 = new Circle();
-console.log(c1)
+
+const keys = Object.keys(c1); // Object.keys only returns Instance/Own Member
+console.log(c1.hasOwnProperty("draw")); // false
+
+// for in loop can iterate th row instance and prototype member
+for (key in c1) {
+  console.log(key);
+}
+console.log("draw" in c1);
