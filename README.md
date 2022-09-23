@@ -65,6 +65,25 @@ Abstraction allows us to hide the implementation from the user but shows only es
 - Eases the burden of maintenance
 - Increase security and confidentially.
 
+#### Encapsulation
+
+Encapsulation is a mechanism that allows us to bind data and functions of a class into an entity. It protects data and functions from outside interference and misuse. Therefore, it also provides security. A class is the best example of encapsulation.
+
+The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users.
+
+To achieve this, you must :
+
+1. declare class variables/attributes as private
+2. provide public get and set methods to access and update the value of a private variable
+
+**Different between Abstraction and Encapsulation**
+Abstraction is the method of hiding the unwanted information. Whereas encapsulation is a method to hide the data in a single entity or unit along with a method to protect information from outside.
+
+- Encapsulation hides internal working
+- Abstraction hides details at the design level
+- Encapsulation hides details at the implementation level.
+
+<img src="./images/abstruction_vs_encaptulation.jpg"/>
 ## OOP In Javascript
 
 ### Factory Function
