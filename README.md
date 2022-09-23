@@ -84,8 +84,11 @@ Abstraction is the method of hiding the unwanted information. Whereas encapsulat
 - Encapsulation hides details at the implementation level.
 
 <img src="./images/abstruction_vs_encaptulation.jpg"/>
+
 <img src="./images/encaptulationandabstruction.png"/>
+
 <img src="./images/exampleofencapsulation.webp"/>
+
 <img src="./images/eandA.png"/>
 
 ## OOP In Javascript
