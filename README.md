@@ -312,7 +312,7 @@ function Circle(radius) {
   this.radius = radius;
 }
 
-// Inherit Shape class property
+// Inherit Shape class property / we can also create an extend function
 Circle.prototype = Object.create(Shape.prototype);
 
 Circle.prototype.name = "Rasel";
@@ -326,6 +326,18 @@ Circle.prototype.draw = function () {
 const c1 = new Circle(1);
 
 console.log(c1);
+```
+
+**Extend function**
+
+```js
+//  To extend/inherit we can create an Extend Function
+function extend(child, parent) {
+  // Inherit Shape class property
+  child.prototype = Object.create(parent.prototype);
+  //  Best Practice: Whenever you update any class prototype  you should reset that class constructor as wall.
+  child.prototype.constructor = Circle;
+}
 ```
 
 #### Call Super class/Constructor

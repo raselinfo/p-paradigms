@@ -16,14 +16,13 @@ function Circle(radius, color) {
     this.radius = radius
 }
 
-
-// Inherit Shape class property
-Circle.prototype = Object.create(Shape.prototype)
-
-Circle.prototype.name = "Rasel"
-
-//  Best Practice: Whenever you update any class prototype  you should reset that class constructor as wall.
-Circle.prototype.constructor = Circle
+//  To extend/inherit we can create an Extend Function
+function extend(child, parent) {
+    // Inherit Shape class property
+    child.prototype = Object.create(parent.prototype)
+    //  Best Practice: Whenever you update any class prototype  you should reset that class constructor as wall.
+    child.prototype.constructor = Circle
+}
 
 Circle.prototype.draw = function () {
     console.log("draw")
