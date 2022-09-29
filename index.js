@@ -1,24 +1,33 @@
-function Circle(radius) {
-  // Instance Member
-  this.radius = radius;
+//  Let's create a Circle class. 
+//  Shape class property member inherit by Circle class
+
+function Shape(color) {
+    this.color = color
+}
+Shape.prototype.duplicate = function () {
+    console.log("duplicate")
 }
 
-// Prototypical member
-Circle.prototype.draw = () => {
-  console.log("Draw", this.radius);
-};
-
-Circle.prototype.toString = function () {
-  return "Update To String Method";
-};
-
-const c1 = new Circle();
-
-const keys = Object.keys(c1); // Object.keys only returns Instance/Own Member
-console.log(c1.hasOwnProperty("draw")); // false
-
-// for in loop can iterate th row instance and prototype member
-for (key in c1) {
-  console.log(key);
+function Circle(radius, color) {
+    // Shape(color) it's bind the color with window object
+    // new Shape(color) {color:undefined}
+    // this.color = new Shape(color).color 
+    Shape.call(this, color)
+    this.radius = radius
 }
-console.log("draw" in c1);
+
+
+// Inherit Shape class property
+Circle.prototype = Object.create(Shape.prototype)
+
+Circle.prototype.name = "Rasel"
+
+//  Best Practice: Whenever you update any class prototype  you should reset that class constructor as wall.
+Circle.prototype.constructor = Circle
+
+Circle.prototype.draw = function () {
+    console.log("draw")
+}
+const c1 = new Circle(1, "red")
+
+console.log(c1)
