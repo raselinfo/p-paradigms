@@ -374,8 +374,43 @@ Circle.prototype.duplicate = function () {
 
 #### Problem of Inheritance
 
+**Avoid creating inheritance hierarchies for small project.try to make one level inheritance**
+
 <img src="./images/problemofinheritance1.png"/>
 <img src="./images/problemofinheritance2.png"/>
+
+**Solution : Composition/Mixins**
+<img src="./images/compositionmixien.png"/>
+
+#### Mixin
+
+```js
+// Mixin
+function mixin(target, ...source) {
+  Object.assign(target, ...source);
+}
+
+const canEat = {
+  eat() {
+    this.hunger--;
+    console.logo("eating");
+  },
+};
+
+const canWalk = {
+  walk() {
+    console.log("walking");
+  },
+};
+
+// const person = Object.assign({}, canEat, canWalk)
+function Person() {}
+
+mixin(Person.prototype, canEat, canWalk);
+
+const p1 = new Person();
+console.log(p1);
+```
 
 ## EVENT DRIVEN PROGRAMMING
 
