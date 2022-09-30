@@ -372,6 +372,11 @@ Circle.prototype.duplicate = function () {
 };
 ```
 
+#### Problem of Inheritance
+
+<img src="./images/problemofinheritance1.png"/>
+<img src="./images/problemofinheritance2.png"/>
+
 ## EVENT DRIVEN PROGRAMMING
 
 In computer programming, event-driven programming is a programming paradigm
