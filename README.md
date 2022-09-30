@@ -328,7 +328,7 @@ const c1 = new Circle(1);
 console.log(c1);
 ```
 
-**Extend function**
+**Extend function/ it's look like encapsulation**
 
 ```js
 //  To extend/inherit we can create an Extend Function
