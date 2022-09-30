@@ -476,6 +476,8 @@ class Dog extends Mammal {
   }
   // Method override
   eats() {
+    // if we want the parent class eat() algorithm we can call the super
+    // supper.move(); ✅
     return `${this.name} eats Chicken`;
   }
 }
