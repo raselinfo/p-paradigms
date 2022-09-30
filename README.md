@@ -359,6 +359,19 @@ function Circle(radius, color) {
 }
 ```
 
+#### Method Override
+
+```js
+extend(Circle, Shape);
+// Override Shape class(Parent class) method
+Circle.prototype.duplicate = function () {
+  // If we want to parent duplicate function as wall
+  Shape.prototype.duplicate.call(this);
+
+  console.log("Circle Duplicate");
+};
+```
+
 ## EVENT DRIVEN PROGRAMMING
 
 In computer programming, event-driven programming is a programming paradigm

@@ -27,6 +27,15 @@ function extend(child, parent) {
 Circle.prototype.draw = function () {
     console.log("draw")
 }
+
+extend(Circle, Shape)
+// Override Shape class(Parent class) method
+Circle.prototype.duplicate = function () {
+    // If we want to parent duplicate function as wall
+    Shape.prototype.duplicate.call(this)
+
+    console.log("Circle Duplicate")
+}
 const c1 = new Circle(1, "red")
 
 console.log(c1)
