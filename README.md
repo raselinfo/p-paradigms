@@ -412,6 +412,75 @@ const p1 = new Person();
 console.log(p1);
 ```
 
+### ES6 Class
+
+1. This keyword in Constructor function
+2. This keyword in Class (Note: this keyword in class maintain 'use strict' mode)
+
+#### Abstraction
+
+**Symbol and WeekMap**
+
+```js
+const _radius = Symbol();
+const _draw = Symbol();
+class Circle {
+  constructor(radius) {
+    this[_radius] = radius;
+  }
+
+  // Instance Member
+  [_draw]() {
+    console.log(Number(this._radius) + 5);
+  }
+}
+
+const obj = new Circle(5);
+console.log(obj);
+
+// Object.getOwnPropertySymbols(obj)
+```
+
+**Getter and Setter**
+
+```js
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  get name() {
+    return this._name;
+  }
+  set name(newName) {
+    this._name = newName;
+  }
+}
+```
+
+#### Inheritance in Class
+
+```js
+class Mammal {
+  constructor(name) {
+    this.name = name;
+  }
+  eats() {
+    return `${this.name} eats Food`;
+  }
+}
+
+class Dog extends Mammal {
+  constructor(name, owner) {
+    super(name);
+    this.owner = owner;
+  }
+  // Method override
+  eats() {
+    return `${this.name} eats Chicken`;
+  }
+}
+```
+
 ## EVENT DRIVEN PROGRAMMING
 
 In computer programming, event-driven programming is a programming paradigm
